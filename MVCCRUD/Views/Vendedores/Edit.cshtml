@@ -1,0 +1,16 @@
+@model MVCCRUD.Models.Vendedor
+
+<h2>Editar Vendedor</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Cedula" />
+    <div>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" />
+    </div>
+    <div>
+        <label asp-for="Telefono"></label>
+        <input asp-for="Telefono" />
+    </div>
+    <button type="submit">Guardar</button>
+</form>

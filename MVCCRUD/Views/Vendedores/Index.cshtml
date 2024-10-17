@@ -1,0 +1,22 @@
+@model IEnumerable<MVCCRUD.Models.Vendedor>
+
+<h2>Vendedores</h2>
+<table>
+    <tr>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Cedula</td>
+            <td>@item.Nombre</td>
+            <td>@item.Telefono</td>
+            <td>
+                <a href="/Vendedores/Edit/@item.Cedula">Editar</a>
+            </td>
+        </tr>
+    }
+</table>
